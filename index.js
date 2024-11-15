@@ -20,7 +20,9 @@ app.use("/films", filmsRoutes);
 app.use("/users", usersRoutes);
 app.use("/emails", emailsRoutes);
 app.use("/favorites", favoriteMediaRoutes);
-
+app.get("/", (req, res) => {
+    res.send("API is running smoothly!");
+  });
 
 mongoose.connect("mongodb+srv://giuseppecaci97:2LOa9qcxszacD0mJ@streaming-database.mxp0m.mongodb.net/?retryWrites=true&w=majority&appName=Streaming-database")
 .then(() => {
